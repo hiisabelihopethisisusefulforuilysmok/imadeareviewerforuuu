@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Math Review</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+
+  <section id="screen-name" class="screen active">
+    <div class="card">
+      <h1>Math Review</h1>
+      <p class="subtitle">What's your name?</p>
+      <input type="text" id="name-input" placeholder="Your name" autofocus autocomplete="off">
+      <button id="name-next-btn">Next</button>
+    </div>
+  </section>
+
+  <section id="screen-lessons" class="screen">
+    <div class="top-bar">
+      <button id="history-btn" class="secondary">History</button>
+    </div>
+    <div class="card">
+      <h1 id="lessons-greeting">What are we studying today?</h1>
+      <p class="subtitle">Pick as many as you like — questions will mix.</p>
+      <div id="lesson-list"></div>
+      <button id="start-btn">Start Now</button>
+    </div>
+  </section>
+
+  <section id="screen-practice" class="screen">
+    <div class="top-bar">
+      <span id="tally">0 / 0</span>
+      <button id="end-game-btn" class="secondary">End Game</button>
+    </div>
+    <div class="card">
+      <div id="question-display" class="question-display"></div>
+      <form id="answer-form">
+        <input type="text" id="answer-input" placeholder="Your answer" autocomplete="off">
+        <button type="submit" id="submit-btn">Submit</button>
+      </form>
+      <div id="feedback" class="feedback"></div>
+      <div id="interpretation" class="interpretation" hidden></div>
+    </div>
+  </section>
+
+  <section id="screen-history" class="screen">
+    <div class="top-bar">
+      <button id="history-back-btn" class="secondary">&larr; Back</button>
+    </div>
+    <div class="card">
+      <h1>History</h1>
+      <p class="subtitle" id="history-empty">No games played yet.</p>
+      <div id="history-list"></div>
+    </div>
+  </section>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.11.0/math.min.js"></script>
+<script src="rng.js"></script>
+<script src="checking.js"></script>
+<script src="math-helpers.js"></script>
+<script src="lessons.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
